@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import LandingDashboard from './components/LandingDashboard.vue'
+import LandingDashboard from './components/LandingMain.vue'
 
 export default {
   name: 'App',
