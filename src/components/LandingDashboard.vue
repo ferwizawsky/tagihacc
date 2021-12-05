@@ -167,7 +167,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
-                             
+
                             <div class="dropdown-menu dropdown-menu-right p-3 shadow-sm animated--grow-in"
                                 aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
@@ -651,7 +651,7 @@ export default {
   },
   data(){
     return{
-      side: 0,
+      side: 1,
     }
   },
   methods: {
