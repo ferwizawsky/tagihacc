@@ -1,34 +1,34 @@
 <template>
-<div class="bg-gray-800">
+<div class="bg-gray-100">
 
     <!-- Page Wrapper -->
     <div id="wrapper" >
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark " id="accordionSidebar" :class="{collapse:side==0}">
+        <ul class="navbar-nav bg-gray-100 sidebar sidebar-light p-4 " :class="{collapse:side==0}">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh"></i>
+                    <i class="fas fa-laugh text-biasa"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3 text-left"><sup>FIoEP</sup>&nbsp; Tagihacc </div>
+                <div class="sidebar-brand-text mx-3 text-left text-biasa"><sup>FIoEP</sup>&nbsp; Tagihacc </div>
             </a>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item" :class="{active:menu==1}">
-                <a class="nav-link" href="#" @click="menu = 1">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+            <li class="nav-item card border-0 mt-4 p-0 shadow" :class="{active:menu==1}">
+                <a class="nav-link" href="#" @click="menu = 1">                    
+                    <button class="btn btn-sm rounded border-0 bg-primary py-2 mr-3 shadow-sm"><i class="fa fa-home text-white"></i></button>
+                    <span class="text-biasa">Dashboard</span></a>
             </li> 
 
             <!-- Nav Item - Charts -->
             <li class="nav-item" :class="{active:menu==2}">
                 <a class="nav-link" href="#"  @click="menu = 2">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span class="rounded border-0 bg-white p-2 mr-3 shadow-sm text-center"><i class="fas  fa-chart-area text-biasa"></i></span>
                     <span>Customer</span></a>
             </li> 
              
@@ -36,18 +36,18 @@
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column ">
+        <div id="content-wrapper" class="d-flex flex-column bg-gray-100">
 
             <!-- Main Content -->
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow-sm"> 
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow-sm rounded mx-2 my-1"> 
                     <button id="sidebarToggleTop" @click="side=!side" class="btn btn-link rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button> 
                        <div class="d-sm-flex align-items-center justify-content-between m-0">
-                        <h1 class="h3 mb-0 text-gray-600">Dashboard</h1> 
+                        <h1 class="h3 mb-0 text-biasa">Dashboard</h1> 
                     </div>
                 </nav>
                 <!-- End of Topbar -->
@@ -63,7 +63,7 @@
             </div>
             <!-- End of Main Content -->
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
+            <footer class="sticky-footer bg-gray-100">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; 2021</span>
@@ -101,7 +101,7 @@ export default {
   },
   data(){
     return{
-      side: false,
+      side: true,
       menu:1,
     }
   },
