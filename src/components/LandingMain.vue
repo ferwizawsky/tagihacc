@@ -1,11 +1,11 @@
 <template>
-<div>
+<div class="bg-gray-800">
 
     <!-- Page Wrapper -->
-    <div id="wrapper">
+    <div id="wrapper" >
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" :class="{collapse:side==0}">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark " id="accordionSidebar" :class="{collapse:side==0}">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
@@ -36,14 +36,14 @@
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content-wrapper" class="d-flex flex-column ">
 
             <!-- Main Content -->
             <div id="content">
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow-sm"> 
-                    <button id="sidebarToggleTop" @click="showSide()" class="btn btn-link rounded-circle mr-3">
+                    <button id="sidebarToggleTop" @click="side=!side" class="btn btn-link rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button> 
                        <div class="d-sm-flex align-items-center justify-content-between m-0">
@@ -66,7 +66,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; FIoEP Tagihacc By Ferry S. F. 2021</span>
+                        <span>Copyright &copy; 2021</span>
                     </div>
                 </div>
             </footer>
@@ -101,19 +101,11 @@ export default {
   },
   data(){
     return{
-      side: 0,
+      side: false,
       menu:1,
     }
   },
-  methods: {
-    showSide(){
-      switch(this.side){
-         case 0:this.side = 1
-         break;
-         case 1:this.side = 0
-         break;
-      }
-    },
+  methods: {  
      
     
   },
@@ -121,3 +113,9 @@ export default {
 
 }
 </script> 
+<style>
+    #accordionSidebar {  
+      overflow-x: hidden;
+      transition: 0.5s;
+    }
+</style>

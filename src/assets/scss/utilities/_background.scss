@@ -9,9 +9,9 @@
 }
 
 @each $color, $value in $theme-colors {
-  .bg-gradientz-#{$color} {
+  .bg-gradientl-#{$color} {
     background-color: $value;
-    background-image: linear-gradient(180deg, #FFEEB1 1% , $value 100%);
+    background-image: linear-gradient(180deg, lighten($value, 15%) 10% ,$value 100%);
     background-size: cover;
   }
 }
